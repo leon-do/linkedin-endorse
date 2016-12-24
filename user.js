@@ -2,5 +2,5 @@ exports.email =
 [
     "czomboni@yahoo.com"
     ,
-    "email2@hotmail.com"
+    "liz1291@yahoo.com"
 ]

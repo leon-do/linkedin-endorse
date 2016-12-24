@@ -2,7 +2,7 @@
 
 /////////////////////////////////
 /////////////////////////////////
-var clientURL = 'https://www.linkedin.com/in/FOOOOOOBARRRRRRR'
+var clientURL = 'https://www.linkedin.com/in/john-smith'
 /////////////////////////////////
 /////////////////////////////////
 
@@ -15,15 +15,15 @@ var user = require('./user.js')
 casper.userAgent('Mozilla/4.0 (comptible; MSIE 6.0; Windows NT 5.1)')
 
 //go to website
-casper.start('https://www.linkedin.com/uas/login');
+casper.start('https://www.linkedin.com/');
 
 //screenshot
 casper.then(function(){this.capture('./screenshots/01.png')})
 
 //username and password
 casper.then(function(){
-    this.sendKeys('#session_key-login', user.email[0]);
-    this.sendKeys('#session_password-login', 'PASSWORD_HERE');
+    this.sendKeys('#login-email', user.email[0]);
+    this.sendKeys('#login-password', 'foobar');
 })
 
 //screenshot
@@ -41,11 +41,18 @@ casper.thenOpen(clientURL)
 //screenshot
 casper.then(function(){this.capture('./screenshots/04.png')})
 
-//click endorse
-casper.thenClick('#endorse-submit')
+
+//click endorse submit
+this.thenClick('#endorse-submit')
 
 //screenshot
-casper.wait(5000,function(){this.capture('./screenshots/05.png')})
+casper.wait(5000,function(){this.capture('./screenshots/0'+ i + 'b.png')})
+
+})
+
+
+
+
 
 
 
